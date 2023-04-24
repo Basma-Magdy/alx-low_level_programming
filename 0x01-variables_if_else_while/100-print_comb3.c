@@ -7,18 +7,23 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 48 + 0 ; i <= 48 + 9; i++)
+	for (i = 0 ; i < 9; i++)
 	{
-		for (j = 49 + i; j <= 48 + 9; j++)
+		for (j = i + 1; j <= 9; j++)
 		{
-			putchar(i);
-			putchar(j);
+			putchar(48 + i);
+			putchar(48 + j);
+			if (i == 8 && j == 9)
+			{
+			putchar('\n');
+			}
+			else
+			{
 			putchar(',');
 			putchar(' ');
+			}
 		}
 	}
-
-
 return (0);
 }
 
