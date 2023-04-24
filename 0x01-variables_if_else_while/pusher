@@ -3,6 +3,6 @@
 
 git add .
 
-git commit -m '0x00 C Hello World Tasks'
+git commit -m '0x01 C Variables, if, else, while Tasks'
 
 git push
