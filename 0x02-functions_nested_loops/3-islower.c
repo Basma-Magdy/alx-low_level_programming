@@ -1,15 +1,12 @@
 #include “main.h”
 /**
-* int _islower - checks for lowercase character
+* _islower - checks for lowercase character
 * Return: Returns 1 if c is lowercase, Returns 0 otherwise
+*@c: the character in ascii code
 */
 int _islower(int c)
 {
-	int i;
-
-	for (i = 97, i <= 122; i++)
-	{
-		if (c == i)
+		if (c >= 97 && c <= 122)
 		{
 			return (1);
 		}
@@ -17,5 +14,5 @@ int _islower(int c)
 		{
 			return (0);
 		}
-	}
+
 }
