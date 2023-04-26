@@ -1,15 +1,8 @@
 #include "main.h"
 /**
-* main - entry point
+* print_alphabet - prints alphapet in lower case
 * Return: always 0 success
 */
-int main(void)
-{
-
-	print_alphabet();
-
-	return (0);
-}
 
 void print_alphabet(void)
 {
@@ -17,8 +10,8 @@ void print_alphabet(void)
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		putchar(i);
+		_putchar(i);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
 
