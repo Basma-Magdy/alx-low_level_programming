@@ -11,8 +11,6 @@ int main(void)
 	return (0);
 }
 
-/* a function to print alphapets*/
-
 void print_alphabet(void)
 {
 	char i;
