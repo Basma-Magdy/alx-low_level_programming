@@ -20,13 +20,12 @@ for (i = 0; i <= 23; i++)
 		hbm = (j && 0xf0) >> 4;
 
 		_putchar(i + 48);
-		_putchar(i + 48);
 		_putchar(':');
-		_putchar(j + 48);
 		_putchar(j + 48);
 		_putchar('\n');
 _putchar(hbh + 48);
 _putchar(lbh + 48);
+_putchar(':');
 _putchar(hbm + 48);
 _putchar(lbm + 48);
 _putchar('\n');
