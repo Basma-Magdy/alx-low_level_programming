@@ -12,14 +12,11 @@ int ld;
 
 ld = n % 10;
 
-if (ld > 0)
+if (ld < 0)
 {
-_putchar(-ld + 48);
-return (-ld);
+ld = ld * -1;
 }
-else
-{
 _putchar(ld + 48);
 return (ld);
 }
-}
+
