@@ -6,8 +6,8 @@
 void jack_bauer(void)
 {
 
-short i, j;
-short high_byte_hrs, low_byte_hrs, high_byte_mins, low_byte_mins;
+int i, j;
+int high_byte_hrs, low_byte_hrs, high_byte_mins, low_byte_mins;
 
 for (i = 0; i <= 23; i++)
 {
