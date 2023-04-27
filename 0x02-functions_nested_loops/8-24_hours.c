@@ -21,7 +21,6 @@ for (i = 0; i <= 23; i++)
 		_putchar(i + 48);
 		_putchar(':');
 		_putchar(j + 48);
-		
 	/*
 		_putchar(high_byte_hrs + 48);
 		_putchar(low_byte_hrs + 48);
