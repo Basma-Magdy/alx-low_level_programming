@@ -18,7 +18,7 @@ for (i = 0; i <= 23; i++)
 	{
 		lbm = j & 0x0f;
 		hbm = (j & 0xf0) >> 4;
-		
+
 		_putchar(hbh + 48);
 		_putchar(lbh + 48);
 		_putchar(':');
