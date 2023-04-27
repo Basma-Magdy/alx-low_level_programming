@@ -7,7 +7,7 @@
 void print_square(int size)
 {
 int col, row;
-i
+
 for (col = 0; col <= size; col++)
 {
 for (row = 0; row < size; row++)
