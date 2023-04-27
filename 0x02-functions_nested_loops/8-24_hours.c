@@ -7,17 +7,17 @@ void jack_bauer(void)
 {
 
 char i, j;
-char high_byte_hrs, low_byte_hrs, high_byte_mins, low_byte_mins;
+char hbh, lbh, hbm, lbm;
 
 for (i = 0; i <= 23; i++)
 {
-	low_byte_hrs = i && 0x0f;
-	high_byte_hrs = (i && 0xf0) >> 4;
+	lbh = i && 0x0f;
+	hbh = (i && 0xf0) >> 4;
 
 	for (j = 0; j <= 59; j++)
 	{
-		low_byte_mins = j && 0x0f;
-		high_byte_mins = (j && 0xf0) >> 4;
+		lbm = j && 0x0f;
+		hbm = (j && 0xf0) >> 4;
 
 		_putchar(i + 48);
 		_putchar(i + 48);
@@ -25,6 +25,12 @@ for (i = 0; i <= 23; i++)
 		_putchar(j + 48);
 		_putchar(j + 48);
 		_putchar('\n');
+_putchar(hbh + 48);
+_putchar(lbh + 48);
+_putchar(hbm + 48);
+_putchar(lbm + 48);
+_putchar('\n');
+_putchar('\n');
 	}
 }
 }
