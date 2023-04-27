@@ -12,13 +12,13 @@ char hbh, lbh, hbm, lbm;
 
 for (i = 0; i <= 23; i++)
 {
-	lbh = i || 0x0f;
-	hbh = (i || 0xf0) >> 4;
+	lbh = i & 0x0f;
+	hbh = (i & 0xf0) >> 4;
 
 	for (j = 0; j <= 59; j++)
 	{
-		lbm = j || 0x0f;
-		hbm = (j || 0xf0) >> 4;
+		lbm = j & 0x0f;
+		hbm = (j & 0xf0) >> 4;
 
 		printf("%d", i);
 		_putchar(':');
