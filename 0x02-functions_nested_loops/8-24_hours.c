@@ -18,16 +18,13 @@ for (i = 0; i <= 23; i++)
 	{
 		low_byte_mins = j && 0x0f;
 		high_byte_mins = (j && 0xf0) >> 4;
-		_putchar(i + 48);
-		_putchar(':');
-		_putchar(j + 48);
-	/*
+
 		_putchar(high_byte_hrs + 48);
 		_putchar(low_byte_hrs + 48);
 		_putchar(':');
 		_putchar(high_byte_mins + 48);
 		_putchar(low_byte_mins + 48);
-		_putchar('\n');*/
+		_putchar('\n');
 	}
 }
 }
