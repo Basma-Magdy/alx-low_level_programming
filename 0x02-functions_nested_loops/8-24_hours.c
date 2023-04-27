@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 * jack_bauer -prints the sign of a number
 * Return: 1,0,-1
@@ -19,9 +20,9 @@ for (i = 0; i <= 23; i++)
 		lbm = j || 0x0f;
 		hbm = (j || 0xf0) >> 4;
 
-		_putchar(i + 48);
+		printf("%d", i);
 		_putchar(':');
-		_putchar(j + 48);
+		printf("%d", j);
 		_putchar('\n');
 _putchar(hbh + 48);
 _putchar(lbh + 48);
