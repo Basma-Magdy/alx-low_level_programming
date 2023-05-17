@@ -6,7 +6,7 @@
 */
 void _puts(char *s)
 {
-while(*s != '\0')
+while (*s != '\0')
 {
 printf("%c", *s);
 s++;
