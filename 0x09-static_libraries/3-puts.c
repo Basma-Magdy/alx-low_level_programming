@@ -6,6 +6,11 @@
 */
 void _puts(char *s)
 {
-
+while(*s != '\0')
+{
+printf("%c", *s);
+s++;
+}
+printf("\n");
 }
 
