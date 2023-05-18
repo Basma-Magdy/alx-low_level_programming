@@ -12,7 +12,7 @@ ptr = (int *)malloc(b);
 
 if (ptr == NULL)
 {
-exit (98);
+exit(98);
 }
 
 }
