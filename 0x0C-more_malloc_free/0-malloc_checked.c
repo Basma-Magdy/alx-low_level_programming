@@ -11,7 +11,7 @@ int *ptr;
 
 ptr = (int *)malloc(b);
 
-if (ptr == 0)
+if (ptr == NULL)
 exit(98);
 
 return (ptr);
