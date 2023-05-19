@@ -8,8 +8,7 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-unsigned int *ptr;
-void *mal;
+unsigned int *ptr, *mal;
 
 ptr = calloc(nmemb, size);
 mal = malloc(nmemb * size);
