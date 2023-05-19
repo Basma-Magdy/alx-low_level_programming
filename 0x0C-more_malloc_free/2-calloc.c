@@ -8,12 +8,12 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-unsigned int *ptr, *mal;
+unsigned int *ptr;
 
 ptr = calloc(nmemb, size);
-mal = malloc(nmemb * size);
+/*mal = malloc(nmemb * size);*/
 
-if (nmemb == 0 || size == 0 || mal == 0)
+if (nmemb == 0 || size == 0 || ptr == 0)
 ptr = NULL;
 
 
