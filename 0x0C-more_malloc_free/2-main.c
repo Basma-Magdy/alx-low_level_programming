@@ -40,7 +40,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
 int main(void)
 {
     char *a;
-char *pt;
+unsigned int *pt;
     a = _calloc(98, sizeof(char));
     strcpy(a, "Best");
     strcpy(a + 4, " School! :)\n");
@@ -49,7 +49,7 @@ char *pt;
     free(a);
 
 pt = _calloc(0, sizeof(int));
-printf("%c\n", *pt);
+printf("%d\n", *pt);
     return (0);
 }
 
