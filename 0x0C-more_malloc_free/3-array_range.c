@@ -16,6 +16,9 @@ int *arrptr;
 *else if (min < 0 && max < 0)
 *return (NULL);
 */
+if (min < 0 && max >= 0)
+min = 0;
+
 arrsize = max - min + 1;
 arrptr = malloc(sizeof(int) * arrsize);
 
