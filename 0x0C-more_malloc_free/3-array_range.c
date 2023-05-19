@@ -10,17 +10,14 @@ int *array_range(int min, int max)
 {
 int i, arrsize;
 int *arrptr;
-/*
-*if (min < 0 && max >= 0)
-*min = 0;
-*else if (min < 0 && max < 0)
-*return (NULL);
-*/
+
+if (min > max)
+return (NULL);
 
 arrsize = max - min + 1;
 arrptr = malloc(sizeof(int) * arrsize);
 
-if (min > max || arrptr == 0)
+if (arrptr == NULL)
 return (NULL);
 
 for (i = 0; i < arrsize; i++)
