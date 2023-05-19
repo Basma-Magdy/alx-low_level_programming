@@ -12,7 +12,7 @@ int i, arrsize;
 int *arrptr;
 
 arrsize = max - min + 1;
-arrptr = malloc(arrsize * sizeof(int));
+arrptr = malloc(arrsize *sizeof(int));
 
 if (min > max || arrptr == 0)
 return (NULL);
