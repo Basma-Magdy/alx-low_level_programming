@@ -17,7 +17,7 @@ min = 0;
 arrsize = max - min + 1;
 arrptr = malloc(arrsize *sizeof(int));
 
-if (min > max || max < 0 || arrptr == 0)
+if (min > max || arrptr == 0)
 return (NULL);
 
 for (i = 0; i < arrsize; i++)
