@@ -24,7 +24,7 @@ exit(98);
 num1 = strtol(argv[1], &p1, 10);
 num2 = strtol(argv[2], &p2, 10);
 
-if (*p1 != '\0' || *p2 != '\0' || errno != 0)
+if (*p1 != '\0' || *p2 != '\0' || errno != 0 || num1 < 0 || num2 < 0)
 {
 printf("error \n");
 exit(98);
@@ -35,5 +35,4 @@ mul = num1 *num2;
 printf("%d\n", mul);
 }
 return (0);
-
 }
