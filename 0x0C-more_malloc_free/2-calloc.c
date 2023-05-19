@@ -9,10 +9,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 unsigned int *ptr;
-ptr = calloc(nmemb, size);
+void *mal;
 
-if (nmemb == 0 || size == 0 || ptr == NULL)
+ptr = calloc(nmemb, size);
+mal = malloc(nmemb * size);
+
+if (nmemb == 0 || size == 0 || mal == 0)
 ptr = NULL;
+
 
 return (ptr);
 }
