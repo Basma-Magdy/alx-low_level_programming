@@ -17,7 +17,7 @@ errno = 0;
 
 if (argc != 3)
 {
-printf ("error \n");
+printf("error \n");
 exit(98);
 }
 
@@ -26,13 +26,13 @@ num2 = strtol(argv[2], &p, 10);
 
 if (*p != '\0' || errno != 0)
 {
-printf ("error \n");
+printf("error \n");
 exit(98);
 }
 else
 {
-mul = num1 * num2;
-printf ("%d\n", mul);
+mul = num1 *num2;
+printf("%d\n", mul);
 }
 return (0);
 
