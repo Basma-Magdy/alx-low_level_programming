@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 {
 int mul;
 
-if (argc - 1 == 0)
+if (argc != 3)
 {
 printf("Error \n");
 return (1);
