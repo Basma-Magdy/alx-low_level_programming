@@ -9,23 +9,33 @@
 */
 int main(int argc, char *argv[])
 {
-int num1,num2, add;
+int i, num, add;
+add = 0;
+num = 0;
 
 if (argc == 1)
-printf("0\n");
-
-if ((!isdigit(argv[1])) || (!isdigit(argv[2])))
 {
-printf("Error\n");
-return(1);
+printf("0\n");
+return (0);
 }
 
-num1 = atoi(argv[1]);
-num2 = atoi(argv[2]);
+for (i = 1; i < argc; i++)
+{
 
-add = num1 + num2;
+if (isdigit(*argv[i]))
+{
+num = atoi(argv[i]);
+
+add = add + num;
+}
+
+else
+{
+printf("Error\n");
+return (1);
+}
+}
 
 printf("%d\n", add);
-
 return (0);
 }
