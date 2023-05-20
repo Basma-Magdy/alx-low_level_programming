@@ -25,5 +25,6 @@ if (str_new == NULL)
 return (NULL);
 
 str_new = str;
+
 return (str_new);
 }
