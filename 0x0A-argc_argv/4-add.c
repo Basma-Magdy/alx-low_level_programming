@@ -9,7 +9,7 @@
 */
 int main(int argc, char *argv[])
 {
-int i, num, add;
+int i, num, add, x;
 add = 0;
 num = 0;
 
@@ -21,6 +21,8 @@ return (0);
 
 for (i = 1; i < argc; i++)
 {
+x = isdigit(*argv[i]);
+printf("x %d\n", x);
 
 if (isdigit(*argv[i]))
 {
