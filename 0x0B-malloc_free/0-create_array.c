@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
+/**
 * create_array - entry point
 * Return: always 0 success
 * @size: number of commands
@@ -15,6 +15,9 @@ if (size <= 0)
 return (NULL);
 
 arr = malloc(sizeof(char) * size);
+
+if (arr == NULL)
+return (NULL);
 
 for (i = 0 ; i < (int)size ; i++)
 {
