@@ -17,7 +17,7 @@ errno = 0;
 
 if (argc != 3)
 {
-printf("error \n");
+printf("Error\n");
 exit(98);
 }
 
@@ -26,7 +26,7 @@ num2 = strtol(argv[2], &p2, 10);
 
 if (*p1 != '\0' || *p2 != '\0' || errno != 0 || num1 < 0 || num2 < 0)
 {
-printf("error \n");
+printf("Error\n");
 exit(98);
 }
 else
