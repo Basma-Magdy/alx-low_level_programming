@@ -13,39 +13,37 @@ char *str_new;
 s1_len =  0;
 s2_len =  0;
 i = 0;
+if (s1 != NULL)
+{
 while (s1[i] != '\0')
 {
 s1_len++;
-i++;
-}
-
+i++; }}
 i = 0;
+if (s2 != NULL)
+{
 while (s2[i] != '\0')
 {
 s2_len++;
-i++;
-}
-
+i++; }}
 snew_len = s1_len + s2_len + 1;
-
 str_new = malloc((sizeof(char)) * snew_len);
-
 if (str_new == NULL)
 return (NULL);
-
 i = 0;
+if (s1 != NULL)
+{
 while (s1[i] != '\0')
 {
 str_new[i] = s1[i];
-i++;
-}
+i++; }}
 j = 0;
+if (s2 != NULL)
+{
 while (s2[j] != '\0')
 {
 str_new[i] = s2[j];
 i++;
-j++;
-}
+j++; }}
 str_new[snew_len] = '\0';
-return (str_new);
-}
+return (str_new); }
