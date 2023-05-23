@@ -19,6 +19,7 @@ if (d1 == NULL)
 {
 free (d1->name);
 free (d1->owner);
+free (d1);
 return (NULL);
 }
 
