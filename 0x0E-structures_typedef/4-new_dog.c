@@ -17,8 +17,6 @@ return (NULL);
 d1 = malloc(sizeof(dog_t));
 if (d1 == NULL)
 {
-free (d1->name);
-free (d1->owner);
 free (d1);
 return (NULL);
 }
