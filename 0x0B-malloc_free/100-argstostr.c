@@ -12,7 +12,6 @@ char *argstostr(int ac, char **av)
 char *arr;
 int i, j, count, word;
 word = 0;
-count = 0;
 
 if (ac == 0 || av == NULL)
 return (NULL);
