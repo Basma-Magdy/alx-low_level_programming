@@ -37,4 +37,5 @@ word++;
 
 arr[word] = '\0';
 return (arr);
+
 }
