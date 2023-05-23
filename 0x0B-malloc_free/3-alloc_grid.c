@@ -15,12 +15,13 @@ return (NULL);
 
 arr = malloc((sizeof(int *)) * height);
 if (arr == NULL)
+
 return (NULL);
 
 for (i = 0; i < height; i++)
 {
 	arr[i] = malloc((sizeof(int)) * width);
-	if (arr[0] == 0)
+	if (arr[i] == 0)
 	{
 		while (i--)
 			free(arr[i]);
