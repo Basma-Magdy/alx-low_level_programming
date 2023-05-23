@@ -17,7 +17,7 @@ return (NULL);
 d1 = malloc(sizeof(dog_t));
 if (d1 == NULL)
 {
-free (d1);
+free(d1);
 return (NULL);
 }
 
