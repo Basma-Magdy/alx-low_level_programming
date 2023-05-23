@@ -16,7 +16,11 @@ return (NULL);
 
 d1 = malloc(sizeof(dog_t));
 if (d1 == NULL)
+{
+free (d1->name);
+free (d1->owner);
 return (NULL);
+}
 
 d1->name = name;
 d1->age = age;
