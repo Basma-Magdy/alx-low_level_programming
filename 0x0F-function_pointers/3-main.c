@@ -20,13 +20,7 @@ exit(98);
 
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
-/*
-if (*argv[2][0] != "+" || argv[2][0] != '-' || argv[2][0] != '*' || argv[2][0] != '/' || argv[2][0] != '%') 
-{
-printf("Error op\n");
-exit(99);
-}
-*/
+
 if ((argv[2][0] == '/' || argv[2][0] == '%') && (num2 == 0))
 {
 printf("Error\n");

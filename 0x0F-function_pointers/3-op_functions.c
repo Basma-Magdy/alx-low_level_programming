@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* op_add: addition function
+* op_add - addition function
 * Return: result ad an int valaue
 * @a: integer input
 * @b: integer input
@@ -11,7 +11,7 @@ int op_add(int a, int b)
 }
 
 /**
-* op_sub: addition function
+* op_sub - addition function
 * Return: result ad an int valaue
 * @a: integer input
 * @b: integer input
@@ -22,7 +22,7 @@ return (a - b);
 }
 
 /**
-* op_mul: addition function
+* op_mul - addition function
 * Return: result ad an int valaue
 * @a: integer input
 * @b: integer input
@@ -33,7 +33,7 @@ return (a * b);
 }
 
 /**
-* op_div: addition function
+* op_div - addition function
 * Return: result ad an int valaue
 * @a: integer input
 * @b: integer input
@@ -44,7 +44,7 @@ return (a / b);
 }
 
 /**
-* op_mod: addition function
+* op_mod - addition function
 * Return: result ad an int valaue
 * @a: integer input
 * @b: integer input

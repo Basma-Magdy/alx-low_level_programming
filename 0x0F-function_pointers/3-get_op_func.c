@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "3-calc.h"
 /**
-* get_op_func: addition function
+* get_op_func - selects the correct function to perform the operation
 * Return: result ad an int valaue
 * @s: integer input
 */
