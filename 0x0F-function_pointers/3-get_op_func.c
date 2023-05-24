@@ -10,15 +10,14 @@
 int (*get_op_func(char *s))(int, int)
 {
 int i;
-op_t ops[6];
 i = 0;
-ops[6] = {
-	[0] = {"+", op_add},
-	[1] = {"-", op_sub},
-	[2] = {"*", op_mul},
-	[3] = {"/", op_div},
-	[4] = {"%", op_mod},
-	[5] = {NULL, NULL}
+op_t ops[] = {
+	{"+", op_add},
+	{"-", op_sub},
+	{"*", op_mul},
+	{"/", op_div},
+	{"%", op_mod},
+	{NULL, NULL}
 };
 
 while (s && (i < 6))
