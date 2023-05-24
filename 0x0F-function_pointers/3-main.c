@@ -14,7 +14,7 @@ int (*calc)(int, int);
 
 if (argc != 4)
 {
-printf("Error arg\n");
+printf("Error\n");
 exit(98);
 }
 
@@ -29,7 +29,7 @@ exit(99);
 */
 if ((argv[2][0] == '/' || argv[2][0] == '%') && (num2 == 0))
 {
-printf("Error div0\n");
+printf("Error\n");
 exit(100);
 }
 
