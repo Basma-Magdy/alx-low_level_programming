@@ -24,6 +24,7 @@ if (separator && (i < (n - 1)))
 printf("%s", separator);
 
 }
-printf("\n");
 }
+
+printf("\n");
 }
