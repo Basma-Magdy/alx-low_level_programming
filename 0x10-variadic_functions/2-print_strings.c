@@ -20,6 +20,7 @@ va_start(ptr, n);
 for (i = 0; i < n; i++)
 {
 str = va_arg(ptr, char *);
+
 printf("%s", str ? str : "nil");
 
 if (separator && (i < (n - 1)))
