@@ -25,6 +25,6 @@ printf("%s", separator);
 
 }
 }
-
+va_end(ptr);
 printf("\n");
 }
