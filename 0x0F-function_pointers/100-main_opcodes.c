@@ -26,13 +26,10 @@ printf("Error\n");
 exit(2);
 }
 
-while (num)
+while (num--)
 {
-printf("%02hhx%s", *ptr++, " ");
-
-num --;
+printf("%02hhx%s", *ptr++, num ? " " : "\n");
 }
-printf("\n");
 
 return (0);
 }
