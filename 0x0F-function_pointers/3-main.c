@@ -28,9 +28,11 @@ exit(100);
 }
 
 calc = get_op_func(argv[2]);
-if (calc == NULL)
+
+/*printf("after calc\n");*/
+if (!calc)
 {
-printf("Error op\n");
+printf("Error\n");
 exit(99);
 }
 

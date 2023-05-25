@@ -26,15 +26,18 @@ ops[5].op = NULL;
 ops[5].f = NULL;
 
 i = 0;
-
+/*printf( "before while s[0] = %c \n", s[0]);*/
 while (s && (i < 6))
 {
+/*printf( "inside while s[0] = %c \n", s[0]);*/
 if (s[0] == ops[i].op[0])
 {
+/*printf("inside if s[0] = %c \n", s[0]);*/
+
 	return (ops[i].f);
 }
 i++;
 }
 
-return (NULL);
+return (0);
 }
