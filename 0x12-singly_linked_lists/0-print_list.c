@@ -20,7 +20,7 @@ printf("[0] (nil)\n");
 else
 printf("[%d] %s\n", h->len, h->str);
 
-h = h -> next;
+h = h->next;
 n++;
 }
 
