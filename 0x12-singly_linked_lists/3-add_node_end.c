@@ -18,14 +18,14 @@ list_t *temp = *head;
 if (!NewNode || !head)
 return (NULL);
 
-if(str)
+if (str)
 {
 NewNode->str = strdup(str);
 
 if (!NewNode->str)
 {
 free(NewNode);
-return(NULL);
+return (NULL);
 }
 
 NewNode->len = strlen(str);
