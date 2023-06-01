@@ -4,6 +4,23 @@
 #include "lists.h"
 
 /**
+* _strlen - string length
+* @s: input string
+* Return: integer length
+*/
+unsigned int _strlen(const char *s) 
+{
+unsigned int i, len;
+len = 0;
+
+for (i = 0; s[i] != '\0'; i++)
+{
+len ++; 
+}
+return (len);
+}
+
+/**
 * add_node - entry point
 * Return: size of list
 * @head: pointer to the list
