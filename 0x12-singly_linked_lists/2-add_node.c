@@ -26,7 +26,7 @@ if (!NewNode->str)
 free(NewNode);
 return (NULL);
 }
-NewNode->len = strlen(str);
+NewNode->len = _strlen(str);
 }
 
 NewNode->next = *head;
@@ -34,4 +34,3 @@ NewNode->next = *head;
 
 return (NewNode);
 }
-
