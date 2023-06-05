@@ -5,7 +5,7 @@
 /**
 * print_listint - print a list
 * Return: number of nodes
-* @h:
+* @h: pointer to list
 */
 size_t print_listint(const listint_t *h)
 {
@@ -18,11 +18,11 @@ return (0);
 while ((h->next) != NULL)
 {
 Num++;
-printf ("%d\n", (h->n));
+printf("%d\n", (h->n));
 h = h->next;
 }
 
-printf ("%d\n", (h->n));
+printf("%d\n", (h->n));
 Num++;
 
 return (Num);
