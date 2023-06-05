@@ -17,9 +17,13 @@ return;
 
 while (tofreeNode)
 {
-temp = tofreeNode->next;
-free(tofreeNode);
-tofreeNode = temp;
+temp = tofreeNode;
+tofreeNode = tofreeNode->next;
+free (temp);
+/*
+*temp = tofreeNode->next;
+*free(tofreeNode);
+*tofreeNode = temp;*/
 }
 
 *head = NULL;
