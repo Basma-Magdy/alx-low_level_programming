@@ -25,7 +25,7 @@ node->n = n;
 node->next = NULL;
 
 if (!idx)
-*head = node;
+(*head)->next = node;
 
 
 while (i != (idx - 1))
@@ -38,5 +38,5 @@ new = temp->next;
 temp->next = node;
 node->next = new;
 
-return (NULL);
+return (node);
 }
