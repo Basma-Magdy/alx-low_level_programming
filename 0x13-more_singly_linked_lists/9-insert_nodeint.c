@@ -38,5 +38,5 @@ new = temp->next;
 temp->next = node;
 node->next = new;
 
-return (node);
+return (NULL);
 }
