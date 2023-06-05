@@ -24,13 +24,17 @@ temp = *head;
 node->n = n;
 node->next = NULL;
 
+if (!idx)
+*head = node;
+
+
 while (i != (idx - 1))
 {
 temp = temp->next;
 i++;
 }
-new = temp->next;
 
+new = temp->next;
 temp->next = node;
 node->next = new;
 
