@@ -3,36 +3,42 @@
 #include "lists.h"
 
 /**
-* insert_nodeint_at_index - entry point
-* Return: pointer to the list
+* delete_nodeint_at_index  - entry point
+* Return: integer
 * @head: pointer to the list
-* @idx: index of node
-* @n: data to insert in node
+* @index: index of node
 */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-listint_t *node, *temp, *new;
+listint_t *prev_node, *node;
 unsigned int i;
 i = 0;
 
-node = malloc(sizeof(listint_t));
+if (!head || !(*head))
+return (-1);
 
-if (!head || !node)
-return (NULL);
+node = *head;
 
-temp = *head;
-node->n = n;
-node->next = NULL;
-
-while (i != (idx - 1)) 
+if (!index)
 {
-temp = temp->next;
-i++;
+node = *head;
+*head = (*head)->next;
+free(node);
+return (1);
 }
-new = temp->next;
 
-temp->next = node;
-node->next = new;
+while (node)
+{
+	if (i == index)
+	{
+	prev_node->next = node->next;
+	free(node);
+	return (1);
+	}
+i++;
+prev_node = node;
+node = node->next;
+}
 
-return (node);
+return (-1);
 }
