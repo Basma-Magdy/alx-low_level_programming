@@ -20,9 +20,9 @@ if (fdata == -1)
 return (0);
 
 nobytes = read(fdata, &buffer[0], letters);
-nobytes = write (STDOUT_FILENO, &buffer[0], nobytes);
+nobytes = write(STDOUT_FILENO, &buffer[0], nobytes);
 
-if(nobytes == -1)
+if (nobytes == -1)
 return (0);
 
 close(fdata);
