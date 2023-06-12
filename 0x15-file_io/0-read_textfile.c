@@ -25,6 +25,7 @@ nobytes = write (STDOUT_FILENO, &buffer[0], nobytes);
 if(nobytes == -1)
 return (0);
 
+close(fdata);
 return (nobytes);
 
 }
