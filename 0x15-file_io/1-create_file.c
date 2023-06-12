@@ -23,10 +23,10 @@ return (-1);
 
 if (len)
 wd = write(fo, text_content, len);
-if (wd == -1)
+close(fo);
+if (wd != len)
 return (-1);
 
-close(fo);
 
 return (1);
 }
