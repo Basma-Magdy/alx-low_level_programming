@@ -16,14 +16,14 @@ wd = 0;
 if (!filename)
 return (-1);
 
-fo = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-if (wd == -1)
+fo = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);/* S_IRUSR|S_IWUSR)*/
+if (fo == -1)
 return (-1);
 
 
 if (len)
 wd = write(fo, text_content, len);
-if (wd != len )
+if (wd == -1)
 return (-1);
 
 close(fo);
