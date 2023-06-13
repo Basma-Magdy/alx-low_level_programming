@@ -4,10 +4,14 @@
 * @s: input string
 * Return: integer length
 */
-int _strlen(char *s)
+ssize_t _strlen(char *s) 
 {
-int i, len;
+int i;
+ssize_t len;
 len = 0;
+
+if (!s)
+return (-1);
 
 for (i = 0; s[i] != '\0'; i++)
 {
@@ -33,7 +37,7 @@ if (!filename)
 return (-1);
 
 fo = open(filename, O_WRONLY | O_APPEND, 0664);
-if (fo < 0)
+if (fo == -1)
 return (-1);
 
 
@@ -41,7 +45,7 @@ if (text_content)
 wd = write(fo, text_content, len);
 close(fo);
 
-if (wd < 0)
+if (wd == -1)
 return (-1);
 
 return (1);
