@@ -42,9 +42,7 @@ return (-1);
 if (len)
 wd = write(fo, text_content, len);
 close(fo);
-if (wd == len)
-return (1);
-else
+if (wd != len)
 return (-1);
 
 return (1);
