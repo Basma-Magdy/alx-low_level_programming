@@ -44,5 +44,5 @@ if (to_file)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_file);
 exit(100); }
-return (0);
+return (1);
 }
