@@ -68,7 +68,7 @@ exit(100);
 
 if (to_file)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", to_file);
+dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", from_file);
 exit(100);
 }
 
