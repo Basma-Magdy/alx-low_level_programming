@@ -4,10 +4,14 @@
 * @s: input string
 * Return: integer length
 */
-int _strlen(char *s)
+ssize_t _strlen(char *s)
 {
-int i, len;
+int i;
+ssize_t len;
 len = 0;
+
+if (!s)
+return (-1);
 
 for (i = 0; s[i] != '\0'; i++)
 {
