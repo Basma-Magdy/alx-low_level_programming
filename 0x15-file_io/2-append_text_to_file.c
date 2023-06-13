@@ -32,7 +32,7 @@ wd = 0;
 if (!filename)
 return (-1);
 
-fo = open(filename, O_WRONLY | O_APPEND);
+fo = open(filename, O_WRONLY | O_APPEND, 0664);
 if (fo == -1)
 return (-1);
 
@@ -40,10 +40,8 @@ return (-1);
 if (len)
 wd = write(fo, text_content, len);
 close(fo);
-if (wd == len)
-return (1);
-else
+if (wd == -1)
 return (-1);
 
-
+return (1);
 }
