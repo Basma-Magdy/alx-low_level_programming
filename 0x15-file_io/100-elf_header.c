@@ -22,21 +22,21 @@ void _close(int fdata)
  * @no: bytes to compare
  * Return: integer
  */
-int _strncmp(const char *str1, const char *str2, size_t no) 
+int _strncmp(const char *str1, const char *str2, size_t no)
 {
-        for ( ; no && *str1 && *str2; --no, ++str1, ++str2)
-        {
-                if (*str1 != *str2)
-                        return (*str1 - *str2);
-        }
-        if (no)
-        {
-                if (*str1)
-                        return (1);
-                if (*str2)
-                        return (-1);
-        }
-        return (0);
+for ( ; no && *str1 && *str2; --no, ++str1, ++str2)
+{
+if (*str1 != *str2)
+return (*str1 - *str2);
+}
+if (no)
+{
+if (*str1)
+return (1);
+if (*str2)
+return (-1);
+}
+return (0);
 }
 
 /**
@@ -45,18 +45,17 @@ int _strncmp(const char *str1, const char *str2, size_t no)
  */
 void elf_magic(const unsigned char *buf)
 {
-        unsigned int i;
+unsigned int i;
 
-        if (_strncmp((const char *) buf, ELFMAG, 4))
-        {
-                write(STDERR_FILENO, "Error: Not an ELF file\n", 23);
-                exit(98);
-        }
+if (_strncmp((const char *) buf, ELFMAG, 4))
+{
+write(STDERR_FILENO, "Error: Not an ELF file\n", 23);
+exit(98);
+}
+printf("ELF Header:\n  Magic:   ");
 
-        printf("ELF Header:\n  Magic:   ");
-
-        for (i = 0; i < 16; ++i)
-                printf("%02x%c", buf[i], i < 15 ? ' ' : '\n');
+for (i = 0; i < 16; ++i)
+printf("%02x%c", buf[i], i < 15 ? ' ' : '\n');
 }
 
 /**
@@ -103,7 +102,7 @@ size_t elf_class(const unsigned char *buf)
  */
 void elf_abivers(const unsigned char *buff)
 {
-        printf("  %-34s %u\n", "ABI Version:", buff[EI_ABIVERSION]);
+	printf("  %-34s %u\n", "ABI Version:", buff[EI_ABIVERSION]);
 }
 
 /**
@@ -123,24 +122,24 @@ void elf_version(const unsigned char *buff)
 /**
  * elf_data - print data
  * @buff: data buffer
- * Return: 0 if anything, 1 if big endian, 
+ * Return: 0 if anything, 1 if big endian
  */
 int elf_data(const unsigned char *buff)
 {
-        printf("  %-34s ", "Data:");
+printf("  %-34s ", "Data:");
 
-        if (buff[EI_DATA] == ELFDATA2MSB)
-        {
-                printf("2's complement, big endian\n");
-                return (1);
-        }
-        if (buff[EI_DATA] == ELFDATA2LSB)
-        {
-                printf("2's complement, little endian\n");
-                return (0);
-        }
-        printf("Invalid data encoding\n");
-        return (0);
+if (buff[EI_DATA] == ELFDATA2MSB)
+{
+printf("2's complement, big endian\n");
+return (1);
+}
+if (buff[EI_DATA] == ELFDATA2LSB)
+{
+printf("2's complement, little endian\n");
+return (0);
+}
+printf("Invalid data encoding\n");
+return (0);
 }
 
 /**
@@ -183,38 +182,38 @@ void elf_osabi(const unsigned char *buff)
  * elf_entry - print address
  * @buff: data buffer
  * @bit_mode: mode if 64 or 32
- * @big_end: endianess 
+ * @big_end: endianess
  */
 void elf_entry(const unsigned char *buff, size_t bit_mode, int big_end)
 {
-        int add_size = bit_mode / 8;
+int add_size = bit_mode / 8;
 
-        printf("  %-34s 0x", "Entry point address:");
+printf("  %-34s 0x", "Entry point address:");
 
-        if (big_end)
-        {
-                while (add_size && !*(buff))
-                        --add_size, ++buff;
+if (big_end)
+{
+while (add_size && !*(buff))
+--add_size, ++buff;
 
-                printf("%x", *buff & 0xff);
+printf("%x", *buff & 0xff);
 
-                while (--add_size > 0)
-                        printf("%02x", *(++buff) & 0xff);
-        }
-        else
-        {
-                buff += add_size;
+while (--add_size > 0)
+printf("%02x", *(++buff) & 0xff);
+}
+else
+{
+buff += add_size;
 
-                while (add_size && !*(--buff))
-                        --add_size;
+while (add_size && !*(--buff))
+--add_size;
 
-                printf("%x", *buff & 0xff);
+printf("%x", *buff & 0xff);
 
-                while (--add_size > 0)
-                        printf("%02x", *(--buff) & 0xff);
-        }
+while (--add_size > 0)
+printf("%02x", *(--buff) &0xff);
+}
 
-        printf("\n");
+printf("\n");
 }
 
 /**
@@ -251,11 +250,11 @@ void elf_type(const unsigned char *buff, int big_end)
 }
 
 /**
-* main - Entry point
-* Return: Always 0
-* @argc: number of arguments
-* @argv: values of args
-*/
+ * main - Entry point
+ * Return: Always 0
+ * @argc: number of arguments
+ * @argv: values of args
+ */
 int main(int argc, const char *argv[])
 {
 	unsigned char buffr[18];
@@ -295,4 +294,3 @@ int main(int argc, const char *argv[])
 
 	return (0);
 }
-
