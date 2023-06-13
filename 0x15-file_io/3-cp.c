@@ -20,7 +20,7 @@ if (from_file == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 exit(98); }
-to_file = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+to_file = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0604);
 if (to_file == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
