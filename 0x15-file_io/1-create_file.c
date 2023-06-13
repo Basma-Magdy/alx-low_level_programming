@@ -16,7 +16,7 @@ wd = 0;
 if (!filename)
 return (-1);
 
-fo = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);/* S_IRUSR|S_IWUSR)*/
+fo = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 if (fo == -1)
 return (-1);
 
