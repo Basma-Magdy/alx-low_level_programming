@@ -47,14 +47,14 @@ exit(98);
 }
 from_file = close(from_file);
 to_file = close(to_file);
-if (from_file)
+if (!from_file)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", from_file);
 exit(100);
 }
-if (to_file)
+if (!to_file)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", from_file);
+dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", to_file);
 exit(100);
 }
 return (1);
