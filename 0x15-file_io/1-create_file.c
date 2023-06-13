@@ -26,7 +26,8 @@ return (len);
 int create_file(const char *filename, char *text_content)
 {
 
-int wd, fo, len;
+int fo;
+ssize_t wd, len;
 len = _strlen(text_content);
 wd = 0;
 
