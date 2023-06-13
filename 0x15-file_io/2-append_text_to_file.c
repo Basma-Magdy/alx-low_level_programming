@@ -4,7 +4,7 @@
 * @s: input string
 * Return: integer length
 */
-int _strlen(char *s) 
+int _strlen(char *s)
 {
 int i, len;
 len = 0;
@@ -24,7 +24,7 @@ return (len);
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-int fo; 
+int fo;
 ssize_t wd, len;
 len = _strlen(text_content);
 wd = 0;
@@ -33,7 +33,7 @@ if (!filename)
 return (-1);
 
 fo = open(filename, O_WRONLY | O_APPEND);
-if (fo == -1) 
+if (fo == -1)
 return (-1);
 
 
