@@ -20,13 +20,13 @@ exit(97);
 from_file = open(av[1], O_RDONLY);
 if (from_file == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %s\n", av[1]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 exit(98);
 }
 to_file = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (to_file == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", av[2]);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 exit(99);
 }
 ab = read(from_file, buffer, 1024);
@@ -35,26 +35,26 @@ while (ab > 0)
 cd = write(to_file, buffer, ab);
 if (cd != ab)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE %s\n", av[2]);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 exit(99);
 }
 ab = read(from_file, buffer, 1024);
 }
 if (ab == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE %s\n", av[1]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 exit(98);
 }
 from_file = close(from_file);
 to_file = close(to_file);
 if (from_file)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");/* %d\n", from_file);*/
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_file);
 exit(100);
 }
 if (to_file)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_file);
 exit(100);
 }
 return (1);
