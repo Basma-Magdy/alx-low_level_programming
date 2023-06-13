@@ -4,7 +4,7 @@
 * @s: input string
 * Return: integer length
 */
-ssize_t _strlen(char *s) 
+ssize_t _strlen(char *s)
 {
 int i;
 ssize_t len;
