@@ -24,14 +24,14 @@ to_file = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (to_file < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-close(from_file);
+/*close(from_file);*/
 exit(99); }
 
 while ((ab = read(from_file, buffer, 1024)) > 0)
 {
 if (ab < 0)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-if ((write(to_file, buffer, ab)) < 0)
+if ((write(to_file, buffer, ab)) != ab)
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 }
 from_file = close(from_file);
