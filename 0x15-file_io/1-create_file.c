@@ -38,9 +38,13 @@ fo = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 if (fo == -1)
 return (-1);
 
+if (!text_content)
+return (1);
 
+if (len)
 wd = write(fo, text_content, len);
 close(fo);
+
 if (wd == -1)
 return (-1);
 
